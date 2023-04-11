@@ -1,0 +1,42 @@
+
+.color-selector {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+
+    .color-input {
+        position: absolute;
+        left: -9999px;
+
+        &:checked + .color-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: calc(100% + 8px);
+                height: calc(100% + 8px);
+                left: -4px;
+                top: -4px;
+                border: 2px solid #000;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    .color-btn {
+        width: 30px;
+        height: 30px;
+        display: block;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+}
+
+
+
+
+
